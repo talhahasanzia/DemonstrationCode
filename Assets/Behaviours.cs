@@ -35,10 +35,15 @@ public class Behaviours : MonoBehaviour {
 	{
 
 
+
 		Cube.GetComponent<Renderer> ().material = renderMaterial;
-		ScaleSlider.value = 2;
-		Sphere.transform.position = StartPos;
 		Cube.transform.rotation = Quaternion.Euler (0, 0, 0);
+
+		ScaleSlider.value = 2;
+
+		Sphere.transform.position = StartPos;
+		Sphere.GetComponent<Rigidbody> ().velocity = Vector3.zero;
+
 		Time.timeScale = 0;
 
 	}
