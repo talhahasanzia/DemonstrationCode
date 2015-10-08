@@ -34,8 +34,7 @@ public class Behaviours : MonoBehaviour {
 	public void ResetClick()
 	{
 
-		Sphere.GetComponent<Rigidbody> ().velocity = Vector3.zero;
-		//Sphere.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
+
 		Cube.GetComponent<Renderer> ().material = renderMaterial;
 		ScaleSlider.value = 2;
 		Sphere.transform.position = StartPos;
@@ -50,6 +49,40 @@ public class Behaviours : MonoBehaviour {
 
 
 	}
+	public void XRotatePositive()
+	{
+		Cube.transform.Rotate (5, 0, 0);
 
 
+	}
+	public void XRotateNegative()
+	{
+		Cube.transform.Rotate (-5, 0, 0);
+		
+		
+	}
+	public void YRotatePositive()
+	{
+		Cube.transform.Rotate (0, 5, 0);
+		
+		
+	}
+	public void YRotateNegative()
+	{
+		Cube.transform.Rotate (0, -5, 0);
+		
+		
+	}
+	public void ZRotatePositive()
+	{
+		Cube.transform.Rotate (0, 0, 5);
+		
+		
+	}
+	public void ZRotateNegative()
+	{
+		Cube.transform.Rotate (0, 0, -5);
+		
+		
+	}
 }
