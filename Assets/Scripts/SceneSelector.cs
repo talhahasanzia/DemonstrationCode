@@ -9,12 +9,15 @@ public class SceneSelector : MonoBehaviour {
 	public GameObject CityScene;
 	public GameObject StartMenu;
 
+
 	public Button ReselectButton;
 
 
 	// Use this for initialization
 	void Start () {
 	
+
+
 
 
 		SetRelativeToScreen ();
@@ -49,6 +52,7 @@ public class SceneSelector : MonoBehaviour {
 
 	public void OnEmptyRoomClicked()
 	{
+
 		ReselectButton.gameObject.SetActive(true);
 		RoomScene.SetActive (true);
 		ParkScene.SetActive (false);
@@ -59,6 +63,7 @@ public class SceneSelector : MonoBehaviour {
 	}
 	public void OnParkClicked()
 	{
+
 		ReselectButton.gameObject.SetActive(true);
 		RoomScene.SetActive (false);
 		ParkScene.SetActive (true);
@@ -72,6 +77,7 @@ public class SceneSelector : MonoBehaviour {
 	}
 	public void OnCityClicked()
 	{
+
 		ReselectButton.gameObject.SetActive(true);
 		RoomScene.SetActive (false);
 		ParkScene.SetActive (false);
@@ -83,6 +89,7 @@ public class SceneSelector : MonoBehaviour {
 	}
 	public void OnReSelectClicked()
 	{
+
 		ReselectButton.gameObject.SetActive(false);
 		RoomScene.SetActive (false);
 		ParkScene.SetActive (false);
