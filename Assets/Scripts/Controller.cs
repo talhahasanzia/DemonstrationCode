@@ -32,13 +32,13 @@ public class Controller : MonoBehaviour {
 
 
 		if (Input.GetKey (KeyCode.W))
-			Rigid.AddRelativeForce (transform.forward * 50);
+			Rigid.AddForce (transform.forward * 50);
 		else if (Input.GetKey (KeyCode.S))
-			Rigid.AddRelativeForce (-transform.forward * 50);
+			Rigid.AddForce (-transform.forward * 50);
 		else if (Input.GetKey (KeyCode.D))
-			Rigid.AddRelativeForce (transform.right * 50);
+			Rigid.AddForce (transform.right * 50);
 		else if (Input.GetKey (KeyCode.A))
-			Rigid.AddRelativeForce (-transform.right * 50);
+			Rigid.AddForce (-transform.right * 50);
 		else
 			Rigid.velocity = Vector3.zero;
 
